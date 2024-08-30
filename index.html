@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Art Marketplace</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        button, input { margin: 10px 0; padding: 10px; }
+        #artworkList { margin-top: 20px; }
+        .artwork { border: 1px solid #ddd; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+    <h1>Digital Art Marketplace</h1>
+    
+    <div>
+        <button id="connectWallet">Connect Wallet</button>
+        <button id="disconnectWallet" style="display:none;">Disconnect Wallet</button>
+        <p id="walletAddress"></p>
+    </div>
+
+    <div>
+        <h2>List Artwork</h2>
+        <input type="text" id="artworkTitle" placeholder="Artwork Title">
+        <input type="number" id="artworkPrice" placeholder="Price (in ETH)">
+        <button id="listArtwork">List Artwork</button>
+    </div>
+    
+    <div>
+        <h2>Buy Artwork</h2>
+        <input type="number" id="artworkId" placeholder="Artwork ID">
+        <button id="buyArtwork">Buy Artwork</button>
+    </div>
+
+    <div>
+        <h2>Update Artwork Price</h2>
+        <input type="number" id="updateArtworkId" placeholder="Artwork ID">
+        <input type="number" id="newPrice" placeholder="New Price (in ETH)">
+        <button id="updatePrice">Update Price</button>
+    </div>
+    
+    <div id="artworkList">
+        <h2>Available Artworks</h2>
+        <!-- Artworks will be listed here -->
+    </div>
+    
+    <div id="status"></div>
+
+    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
