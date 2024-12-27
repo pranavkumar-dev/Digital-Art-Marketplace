@@ -1,1 +1,1 @@
-## Digital Art MarketPLace
+## Digital Art MarketPlace
